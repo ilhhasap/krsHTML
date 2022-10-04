@@ -1,6 +1,6 @@
 <?php
 
-    require('db.php');
+    require('db/index.php');
     
 ?>
 
@@ -48,7 +48,7 @@
             <!-- Membuat 2 Kolom Vertical (Untuk Logo dan Text KRS ) -->
             <div class="d-flex flex-column p-2">
                 <div class="p-2">
-                    <img src="logo.png" width="800px">
+                    <img src="assets/logo.png" width="800px">
                 </div>
                 <div class="p-2 text-end">
                     <h1 class="krs-title"> Kartu Rencana Studi</h1>
@@ -56,7 +56,7 @@
             </div>
             <!-- Menempelkan Foto, 1 row dengan Logo dan KRS  -->
             <div class="p-2">
-                <img src="photo.png" width="200px">
+                <img src="assets/photo.png" width="200px">
             </div>
         </div>
 
@@ -138,7 +138,7 @@
 
             <!-- Bagian 1 -->
             <div class="">
-                <img src="barcode.png" width="200">
+                <img src="assets/barcode.png" width="200">
             </div>
 
             <!-- Bagian 2 -->
