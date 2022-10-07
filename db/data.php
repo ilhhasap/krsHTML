@@ -1,6 +1,15 @@
 <?php
 
-$i = 1;
+
+    $noDaftar = "202120347";
+    $nim = "210103020";
+    $mahasiswa = "Ilham Tristadika Saputra";
+    
+    $prodi = "Teknik Informatika";
+    $dosen = "Dessy Ambarsari, S.E., M.M,";
+    $jenjang = "S1";
+    $jenisDaftar = "Regular";
+    $semester = "2022/2023 Ganjil";
 
     $datas = [
         [
@@ -30,7 +39,7 @@ $i = 1;
         [
             'kelas' => '21A1',
             'kode' => 'MKK325',
-            'matkul' => 'Statistik',
+            'matkul' => 'STATISTIK',
             'sks' => 3,
             'uts' => '-',
             'uas' => '-',
@@ -45,28 +54,29 @@ $i = 1;
         ],
         [
             'kelas' => '21A1',
-            'kode' => 'TI20307',
-            'matkul' => 'KEWIRAUSAHAAN 1',
+            'kode' => 'MKB309',
+            'matkul' => 'PEMROGRAMAN BERORIENTASI OBJEK',
             'sks' => 3,
             'uts' => '-',
             'uas' => '-',
         ],
         [
             'kelas' => '21A1',
-            'kode' => 'TI20307',
-            'matkul' => 'KEWIRAUSAHAAN 1',
+            'kode' => 'TI307',
+            'matkul' => 'REKAYASA PERANGKAT LUNAK',
             'sks' => 3,
             'uts' => '-',
             'uas' => '-',
         ],
         [
             'kelas' => '21A1',
-            'kode' => 'TI20307',
-            'matkul' => 'KEWIRAUSAHAAN 1',
+            'kode' => 'TI305',
+            'matkul' => 'MATEMATIKA DISKRIT',
             'sks' => 3,
             'uts' => '-',
             'uas' => '-',
         ],
     ];
+    $i = 1;
 
 ?>

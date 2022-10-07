@@ -1,6 +1,6 @@
 <?php
 
-    require('db/index.php');
+    require('db/data.php');
     
 ?>
 
@@ -44,6 +44,7 @@
 
 
     <div class="container text-center pt-5 p-5">
+
         <!-- Membuat 1 Baris Horizontal -->
         <div class="d-flex flex-row mb-3 justify-content-between">
             <!-- Membuat 2 Kolom Vertical (Untuk Logo dan Text KRS ) -->
@@ -68,33 +69,32 @@
             <!-- Membuat bbrp kolom vertikal -->
             <div class="d-flex flex-column text-start">
                 <div class="">
-                    <pre class="text-small">No. Daftar               :   <span><?= "202120347"?></pre>
+                    <pre class="text-small">No. Daftar               :   <span><?= $noDaftar;?></pre>
                 </div>
                 <div class="">
-                    <pre class="text-small">NIM                            :   <span><?= "210103020"?></pre>
+                    <pre class="text-small">NIM                            :   <span><?= $nim;?></pre>
                 </div>
                 <div class="">
-                    <pre class="text-small">Nama                        :   <span><?= "Ilham Tristadika Saputra"?></pre>
+                    <pre class="text-small">Nama                        :   <span><?= $mahasiswa;?></pre>
                 </div>
                 <div class="">
-                    <pre class="text-small">Program Studi      :   <span><?= "Teknik Informatika"?></pre>
+                    <pre class="text-small">Program Studi      :   <span><?= $prodi;?></pre>
                 </div>
             </div>
             <!-- Membuat bbrp kolom vertikal -->
             <div class="d-flex flex-column text-start">
                 <div class="">
+                    <pre class="text-small">Pembimbing Akademik       :   <span><?= $dosen;?></pre>
+                </div>
+                <div class="">
+                    <pre class="text-small">Jenjang                                      :   <span><?= $jenjang;?></pre>
+                </div>
+                <div class="">
+                    <pre class="text-small">Jenis Daftar                             :   <span><?= $jenisDaftar;?></pre>
+                </div>
+                <div class="">
                     <pre
-                        class="text-small">Pembimbing Akademik       :   <span><?= "Dessy Ambarsari, S.E., M.M,"?></pre>
-                </div>
-                <div class="">
-                    <pre class="text-small">Jenjang                                      :   <span><?= "S1"?></pre>
-                </div>
-                <div class="">
-                    <pre class="text-small">Jenis Daftar                             :   <span><?= "Regular"?></pre>
-                </div>
-                <div class="">
-                    <pre
-                        class="text-small">Semester                                  :   <span><?= "2022/2023 Ganjil"?></pre>
+                        class="text-small">Semester                                  :   <span><?= $semester;"2022/2023 Ganjil"?></pre>
                 </div>
             </div>
         </div>
@@ -117,6 +117,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <?php foreach($datas as $data) : ?>
                     <tr>
                         <td><?= $i++;?></td>
@@ -127,6 +128,9 @@
                         <td><?= $data['uts'];?></td>
                         <td><?= $data['uas'];?></td>
                     </tr>
+
+                    <!-- Menjumlahkan SKS -->
+                    <?php $sks[] = $data['sks']; $jumlahSKS = array_sum($sks);?>
                     <?php endforeach;?>
                 </tbody>
             </table>
@@ -148,7 +152,7 @@
                     Mengesahkan, <br><br> Pembimbing Akademik
                 </div>
                 <div class="fw-bold">
-                    Dessy Ambarsari, S.E., M.M,
+                    <?= $dosen?>
                 </div>
             </div>
 
@@ -159,13 +163,13 @@
                     Mahasiswa
                 </div>
                 <div class="fw-bold">
-                    ILHAM TRISTADIKA SAPUTRA
+                    <?= $mahasiswa?>
                 </div>
             </div>
 
             <!-- Bagian 4 -->
             <div class="text-small">
-                <pre>Jumlah SKS        : <span>23</span></pre>
+                <pre>Jumlah SKS        : <span><?= $jumlahSKS;?></span></pre>
             </div>
         </div>
 
